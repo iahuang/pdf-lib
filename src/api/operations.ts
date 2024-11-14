@@ -245,7 +245,7 @@ export const drawRectangle = (options: {
 
   // Ensure rx and ry are within bounds
   const rx = Math.max(0, Math.min(options.rx || 0, w / 2));
-  const ry = Math.max(0, Math.min(options.ry || 0, h / 2));
+  const ry = Math.min(0, Math.max(options.ry || 0, h / 2));
 
   // Generate the SVG path
   const d =
